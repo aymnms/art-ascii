@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 
 char A[5][5] = { {' ', '_', '_', '_', ' '}, {'|', ' ', ' ', ' ', '|'}, {'|', '_', '_', '_', '|'}, {'|', ' ', ' ', ' ', '|'}, {'|', ' ', ' ', ' ', '|'} };
 char B[5][5] = { {' ', '_', '_', '_', ' '}, {'|', ' ', ' ', ' ', '\\'}, {'|', '_', '_', '_', '/'}, {'|', ' ', ' ', ' ', '\\'}, {'|', '_', '_', '_', '/'} };
@@ -36,6 +35,8 @@ int main(){
 
     printf("Hola, qu'est ce que tu veux ecrire ? ");
     scanf("%s", &rep);
+    strupr(rep);
+    printf("%s\n", rep);
     length = strlen(rep);
 
     for(int i = 0, imax = 5; i < imax; i++){
@@ -144,6 +145,10 @@ int main(){
             }else if (temp == 'Z') {
                 for(int j = 0, jmax = 5; j < jmax; j++){
                     printf("%c", Z[i][j]);   
+                }
+            }else if(temp == ' '){
+                for(int j = 0, jmax = 5; j < jmax; j++){
+                    printf("_");   
                 }
             }
             printf(" ");

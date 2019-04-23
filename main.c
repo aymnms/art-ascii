@@ -29,129 +29,133 @@ char X[5][5] = { {'\\', ' ', ' ', ' ', '/'}, {' ', '\\', ' ', '/', ' '}, {' ', '
 char Y[5][5] = { {' ', ' ', ' ', ' ', ' '}, {'\\', ' ', ' ', ' ', '/'}, {' ', '\\', ' ', '/', ' '}, {' ', ' ', 'V', ' ', ' '}, {' ', ' ', '|', ' ', ' '} };
 char Z[5][5] = { {'_', '_', '_', '_', ' '}, {' ', ' ', ' ', '/', ' '}, {' ', ' ', '/', ' ', ' '}, {' ', '/', ' ', ' ', ' '}, {'/', '_', '_', '_', '_'} };
 
-int main(){
-    char rep[5];
-    int length;
+int main(int argc, char *argv[]){
 
-    printf("Hola, qu'est ce que tu veux ecrire ? ");
-    scanf("%s", &rep);
-    strupr(rep);
-    printf("%s\n", rep);
-    length = strlen(rep);
+    for(int i = 1, imax = argc; i < imax; i++){
+        for(int j = 0; j < strlen(argv[i]); j++){
+            printf("%c", argv[i][j]);
+        }
+        printf(" ");
+    }
+    printf("\n");
 
-    for(int i = 0, imax = 5; i < imax; i++){
-        for(int lettre = 0; lettre < length; lettre++){
-            char temp = rep[lettre];
-            if (temp == 'A') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", A[i][j]);   
+    //argv = phrase, argv[0] = 1er mot, argv[1][1] = premiere lettre du premier mot
+    for(int ligne = 0, lignemax = 5; ligne < lignemax; ligne++){
+        for(int i = 1, imax = argc; i < imax; i++){ //nombre de mot, i = strlen(phrase)
+            for(int j = 0, jmax = strlen(argv[i]); j < jmax; j++){ //nombre de lettre, j = strlen(mot)
+                char temp = argv[i][j];
+                if (temp == 'A') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", A[ligne][colonne]);
+                    }
+                }else if (temp == 'B') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", B[ligne][colonne]);   
+                    }
+                }else if (temp == 'C') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", C[ligne][colonne]);   
+                    }
+                }else if (temp == 'D') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", D[ligne][colonne]);   
+                    }
+                }else if (temp == 'E') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", E[ligne][colonne]);   
+                    }
+                }else if (temp == 'F') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", F[ligne][colonne]);   
+                    }
+                }else if (temp == 'G') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", G[ligne][colonne]);   
+                    }
+                }else if (temp == 'H') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", H[ligne][colonne]);   
+                    }
+                }else if (temp == 'I') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", I[ligne][colonne]);   
+                    }
+                }else if (temp == 'J') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", J[ligne][colonne]);   
+                    }
+                }else if (temp == 'K') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", K[ligne][colonne]);   
+                    }
+                }else if (temp == 'L') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", L[ligne][colonne]);   
+                    }
+                }else if (temp == 'M') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", M[ligne][colonne]);   
+                    }
+                }else if (temp == 'N') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", N[ligne][colonne]);   
+                    }
+                }else if (temp == 'O') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", O[ligne][colonne]);   
+                    }
+                }else if (temp == 'P') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", P[ligne][colonne]);   
+                    }
+                }else if (temp == 'Q') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", Q[ligne][colonne]);   
+                    }
+                }else if (temp == 'R') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", R[ligne][colonne]);   
+                    }
+                }else if (temp == 'S') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", S[ligne][colonne]);   
+                    }
+                }else if (temp == 'T') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", T[ligne][colonne]);   
+                    }
+                }else if (temp == 'U') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", U[ligne][colonne]);   
+                    }
+                }else if (temp == 'V') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", V[ligne][colonne]);   
+                    }
+                }else if (temp == 'W') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", W[ligne][colonne]);   
+                    }
+                }else if (temp == 'X') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", X[ligne][colonne]);   
+                    }
+                }else if (temp == 'Y') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", Y[ligne][colonne]);   
+                    }
+                }else if (temp == 'Z') {
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("%c", Z[ligne][colonne]);   
+                    }
+                }else if(temp == ' '){
+                    for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++){
+                        printf("_");   
+                    }
                 }
-            }else if (temp == 'B') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", B[i][j]);   
-                }
-            }else if (temp == 'C') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", C[i][j]);   
-                }
-            }else if (temp == 'D') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", D[i][j]);   
-                }
-            }else if (temp == 'E') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", E[i][j]);   
-                }
-            }else if (temp == 'F') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", F[i][j]);   
-                }
-            }else if (temp == 'G') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", G[i][j]);   
-                }
-            }else if (temp == 'H') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", H[i][j]);   
-                }
-            }else if (temp == 'I') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", I[i][j]);   
-                }
-            }else if (temp == 'J') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", J[i][j]);   
-                }
-            }else if (temp == 'K') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", K[i][j]);   
-                }
-            }else if (temp == 'L') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", L[i][j]);   
-                }
-            }else if (temp == 'M') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", M[i][j]);   
-                }
-            }else if (temp == 'N') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", N[i][j]);   
-                }
-            }else if (temp == 'O') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", O[i][j]);   
-                }
-            }else if (temp == 'P') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", P[i][j]);   
-                }
-            }else if (temp == 'Q') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", Q[i][j]);   
-                }
-            }else if (temp == 'R') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", R[i][j]);   
-                }
-            }else if (temp == 'S') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", S[i][j]);   
-                }
-            }else if (temp == 'T') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", T[i][j]);   
-                }
-            }else if (temp == 'U') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", U[i][j]);   
-                }
-            }else if (temp == 'V') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", V[i][j]);   
-                }
-            }else if (temp == 'W') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", W[i][j]);   
-                }
-            }else if (temp == 'X') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", X[i][j]);   
-                }
-            }else if (temp == 'Y') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", Y[i][j]);   
-                }
-            }else if (temp == 'Z') {
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("%c", Z[i][j]);   
-                }
-            }else if(temp == ' '){
-                for(int j = 0, jmax = 5; j < jmax; j++){
-                    printf("_");   
-                }
+                printf(" ");
             }
-            printf(" ");
+            printf("   ");
         }
         printf("\n");
     }

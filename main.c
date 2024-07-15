@@ -9,8 +9,8 @@
 
 // Fonction pour imprimer une ligne d'une lettre donnée
 void print_letter_line(char letter, int line) {
-    if (letter >= 'a' && letter <= 'z') {
-        int index = letter - 'a';
+    if (letter >= '!' && letter <= '~') {
+        int index = letter - '!';
         int character_width = big_alphabet_widths[index];
         char (*character)[character_width] = (char (*)[character_width])big_alphabet[index];
         printf("%s", character[line]);

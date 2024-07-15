@@ -12,79 +12,48 @@
 #define LIGNEMAX 8
 #define COLONNEMAX 8
 
+// Fonction pour imprimer une ligne d'une lettre donnée
+void print_letter_line(char letter, int line) {
+    switch (letter) {
+        case 'a': printf("%s", a[line]); break;
+        case 'b': printf("%s", b[line]); break;
+        case 'c': printf("%s", c[line]); break;
+        case 'd': printf("%s", d[line]); break;
+        case 'e': printf("%s", e[line]); break;
+        case 'f': printf("%s", f[line]); break;
+        case 'g': printf("%s", g[line]); break;
+        case 'h': printf("%s", h[line]); break;
+        case 'i': printf("%s", i[line]); break;
+        case 'j': printf("%s", j[line]); break;
+        case 'k': printf("%s", k[line]); break;
+        case 'l': printf("%s", l[line]); break;
+        case 'm': printf("%s", m[line]); break;
+        case 'n': printf("%s", n[line]); break;
+        case 'o': printf("%s", o[line]); break;
+        case 'p': printf("%s", p[line]); break;
+        case 'q': printf("%s", q[line]); break;
+        case 'r': printf("%s", r[line]); break;
+        case 's': printf("%s", s[line]); break;
+        case 't': printf("%s", t[line]); break;
+        case 'u': printf("%s", u[line]); break;
+        case 'v': printf("%s", v[line]); break;
+        case 'w': printf("%s", w[line]); break;
+        case 'x': printf("%s", x[line]); break;
+        case 'y': printf("%s", y[line]); break;
+        case 'z': printf("%s", z[line]); break;
+        default: break;
+    }
+}
 
 int main(int argc, char *argv[]){
 
-    for(int i = 0, imax = argc; i < imax; i++){
-        for(int j = 0; j < strlen(argv[i]); j++){
-            printf("%c", argv[i][j]);
-        }
-        printf(" ");
-    }
-    printf("\n");
-
-    //argv = phrase, argv[0] = 1er mot, argv[1][1] = premiere lettre du premier mot
-    for(int ligne = 0; ligne < LIGNEMAX; ligne++){
-        for(int mot = 1, motmax = argc; mot < motmax; mot++){ //numero du mot, strlen(phrase)
-            for(int lettre = 0, lettremax = strlen(argv[mot]); lettre < lettremax; lettre++){ //numero de la lettre, strlen(mot)
-                switch(argv[mot][lettre]){
-                    case 'a': for(int colonne = 0, colonnemax = strlen(a[ligne]); colonne < colonnemax; colonne++) printf("%c", a[ligne][colonne]); break;
-                    case 'b': for(int colonne = 0, colonnemax = strlen(b[ligne]); colonne < colonnemax; colonne++) printf("%c", b[ligne][colonne]); break;
-                    case 'c': for(int colonne = 0, colonnemax = strlen(c[ligne]); colonne < colonnemax; colonne++) printf("%c", c[ligne][colonne]); break;
-                    case 'd': for(int colonne = 0, colonnemax = strlen(d[ligne]); colonne < colonnemax; colonne++) printf("%c", d[ligne][colonne]); break;
-                    case 'e': for(int colonne = 0, colonnemax = strlen(e[ligne]); colonne < colonnemax; colonne++) printf("%c", e[ligne][colonne]); break;
-                    case 'f': for(int colonne = 0, colonnemax = strlen(f[ligne]); colonne < colonnemax; colonne++) printf("%c", f[ligne][colonne]); break;
-                    case 'g': for(int colonne = 0, colonnemax = strlen(g[ligne]); colonne < colonnemax; colonne++) printf("%c", g[ligne][colonne]); break;
-                    case 'h': for(int colonne = 0, colonnemax = strlen(h[ligne]); colonne < colonnemax; colonne++) printf("%c", h[ligne][colonne]); break;
-                    case 'i': for(int colonne = 0, colonnemax = strlen(i[ligne]); colonne < colonnemax; colonne++) printf("%c", i[ligne][colonne]); break;
-                    case 'j': for(int colonne = 0, colonnemax = strlen(j[ligne]); colonne < colonnemax; colonne++) printf("%c", j[ligne][colonne]); break;
-                    case 'k': for(int colonne = 0, colonnemax = strlen(k[ligne]); colonne < colonnemax; colonne++) printf("%c", k[ligne][colonne]); break;
-                    case 'l': for(int colonne = 0, colonnemax = strlen(l[ligne]); colonne < colonnemax; colonne++) printf("%c", l[ligne][colonne]); break;
-                    case 'm': for(int colonne = 0, colonnemax = strlen(m[ligne]); colonne < colonnemax; colonne++) printf("%c", m[ligne][colonne]); break;
-                    case 'n': for(int colonne = 0, colonnemax = strlen(n[ligne]); colonne < colonnemax; colonne++) printf("%c", n[ligne][colonne]); break;
-                    case 'o': for(int colonne = 0, colonnemax = strlen(o[ligne]); colonne < colonnemax; colonne++) printf("%c", o[ligne][colonne]); break;
-                    case 'p': for(int colonne = 0, colonnemax = strlen(p[ligne]); colonne < colonnemax; colonne++) printf("%c", p[ligne][colonne]); break;
-                    case 'q': for(int colonne = 0, colonnemax = strlen(q[ligne]); colonne < colonnemax; colonne++) printf("%c", q[ligne][colonne]); break;
-                    case 'r': for(int colonne = 0, colonnemax = strlen(r[ligne]); colonne < colonnemax; colonne++) printf("%c", r[ligne][colonne]); break;
-                    case 's': for(int colonne = 0, colonnemax = strlen(s[ligne]); colonne < colonnemax; colonne++) printf("%c", s[ligne][colonne]); break;
-                    case 't': for(int colonne = 0, colonnemax = strlen(t[ligne]); colonne < colonnemax; colonne++) printf("%c", t[ligne][colonne]); break;
-                    case 'u': for(int colonne = 0, colonnemax = strlen(u[ligne]); colonne < colonnemax; colonne++) printf("%c", u[ligne][colonne]); break;
-                    case 'v': for(int colonne = 0, colonnemax = strlen(v[ligne]); colonne < colonnemax; colonne++) printf("%c", v[ligne][colonne]); break;
-                    case 'w': for(int colonne = 0, colonnemax = strlen(w[ligne]); colonne < colonnemax; colonne++) printf("%c", w[ligne][colonne]); break;
-                    case 'x': for(int colonne = 0, colonnemax = strlen(x[ligne]); colonne < colonnemax; colonne++) printf("%c", x[ligne][colonne]); break;
-                    case 'y': for(int colonne = 0, colonnemax = strlen(y[ligne]); colonne < colonnemax; colonne++) printf("%c", y[ligne][colonne]); break;
-                    case 'z': for(int colonne = 0, colonnemax = strlen(z[ligne]); colonne < colonnemax; colonne++) printf("%c", z[ligne][colonne]); break;
-
-                    // case 'A': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", A[ligne][colonne]); break;
-                    // case 'B': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", B[ligne][colonne]); break;
-                    // case 'C': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", C[ligne][colonne]); break;
-                    // case 'D': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", D[ligne][colonne]); break;
-                    // case 'E': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", E[ligne][colonne]); break;
-                    // case 'F': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", F[ligne][colonne]); break;
-                    // case 'G': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", G[ligne][colonne]); break;
-                    // case 'H': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", H[ligne][colonne]); break;
-                    // case 'J': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", I[ligne][colonne]); break;
-                    // case 'I': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", J[ligne][colonne]); break;
-                    // case 'K': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", K[ligne][colonne]); break;
-                    // case 'L': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", L[ligne][colonne]); break;
-                    // case 'M': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", M[ligne][colonne]); break;
-                    // case 'N': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", N[ligne][colonne]); break;
-                    // case 'O': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", O[ligne][colonne]); break;
-                    // case 'P': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", P[ligne][colonne]); break;
-                    // case 'Q': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", Q[ligne][colonne]); break;
-                    // case 'R': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", R[ligne][colonne]); break;
-                    // case 'S': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", S[ligne][colonne]); break;
-                    // case 'T': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", T[ligne][colonne]); break;
-                    // case 'U': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", U[ligne][colonne]); break;
-                    // case 'V': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", V[ligne][colonne]); break;
-                    // case 'W': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", W[ligne][colonne]); break;
-                    // case 'X': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", X[ligne][colonne]); break;
-                    // case 'Y': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", Y[ligne][colonne]); break;
-                    // case 'Z': for(int colonne = 0, colonnemax = 5; colonne < colonnemax; colonne++) printf("%c", Z[ligne][colonne]); break;
-                }
-                // printf(" ");
+    for (int ligne = 0; ligne < LIGNEMAX; ligne++) {
+        for (int mot = 1; mot < argc; mot++) { // Ignorer argv[0] qui est le nom du programme
+            int lettremax = strlen(argv[mot]);
+            for (int lettre = 0; lettre < lettremax; lettre++) {
+                print_letter_line(argv[mot][lettre], ligne);
             }
-            printf("   ");
+            printf("   "); // Espacement entre les mots
         }
         printf("\n");
     }
